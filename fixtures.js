@@ -8,6 +8,18 @@ function getImg() {
     })
     .then((resp) => Buffer.from(resp.data).toString("base64"));
 }
+
+function createDB() {
+  return axios
+    .put("http://admin:cat@127.0.0.1:5984/cat")
+    .then((_) => console.log("database created"))
+    .catch((_) => {
+      axios
+        .delete("http://admin:cat@127.0.0.1:5984/cat")
+        .then((_) => createDB());
+    });
+}
+
 async function getArray() {
   let RESULT = [];
   for (let i = 0; i < 10; i++) {
@@ -23,6 +35,7 @@ async function getArray() {
 }
 
 console.log("Generate fake data on database");
+createDB();
 getArray().then((resp) => {
   axios
     .post(
