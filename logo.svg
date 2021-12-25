@@ -24,7 +24,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.64338288"
-     inkscape:cx="134.4456"
+     inkscape:cx="-201.27984"
      inkscape:cy="450.74249"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -44,7 +44,11 @@
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <g
-         id="g935">
+         id="g935"
+         transform="matrix(-1,0,0,1,231.70143,0)"
+         inkscape:export-filename="/home/thibaud/Documents/angularWorkspace/cat_angular_seo/src/assets/logo.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
         <ellipse
            style="fill:#e7e00d;fill-opacity:1;stroke:#000000;stroke-width:3.09526;stroke-miterlimit:4;stroke-dasharray:none"
            id="path14686"

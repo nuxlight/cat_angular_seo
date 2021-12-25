@@ -11,12 +11,10 @@ function getImg() {
 
 function createDB() {
   return axios
-    .put("http://admin:cat@127.0.0.1:5984/cat")
+    .put("http://cat:cat@127.0.0.1:5984/cat")
     .then((_) => console.log("database created"))
     .catch((_) => {
-      axios
-        .delete("http://admin:cat@127.0.0.1:5984/cat")
-        .then((_) => createDB());
+      axios.delete("http://cat:cat@127.0.0.1:5984/cat").then((_) => createDB());
     });
 }
 
@@ -39,7 +37,7 @@ createDB();
 getArray().then((resp) => {
   axios
     .post(
-      "http://admin:cat@127.0.0.1:5984/cat/_bulk_docs",
+      "http://cat:cat@127.0.0.1:5984/cat/_bulk_docs",
       JSON.stringify({
         docs: resp,
       }),
