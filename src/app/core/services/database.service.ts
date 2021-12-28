@@ -11,8 +11,9 @@ export class DatabaseService {
   constructor(private http: HttpClient) {}
 
   async getAllcats() {
-    var headers_object = new HttpHeaders();
-    headers_object.append('Authorization', 'Basic ' + btoa('cat:cat'));
+    var headers_object = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', 'Basic ' + btoa('cat:cat'));
     this.http
       .get(`${DATABASE_URL}/${DATABASE}/_all_docs`, {
         headers: headers_object,
