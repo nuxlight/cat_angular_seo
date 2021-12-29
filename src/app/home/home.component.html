@@ -1,3 +1,12 @@
 <div>
-  <p>Cats are here</p>
+  <div *ngIf="cats.length > 0; else elseTemplate">
+    <div class="container-cards" *ngFor="let cat of cats">
+      <app-cat-card [cat]="cat"></app-cat-card>
+    </div>
+  </div>
+  <ng-template #elseTemplate>
+    <div #charging class="container-charged-logo" *ngIf="true">
+      <img class="charged-logo" alt="loading" src="/assets/pawprint.png" />
+    </div>
+  </ng-template>
 </div>

@@ -1,0 +1,12 @@
+<div class="card">
+  <h1 class="title">{{ cat?.nom }}</h1>
+  <img
+    class="image"
+    [alt]="[cat?.nom]"
+    [src]="'data:image/png;base64,' + [cat?.image]"
+  />
+  <p>Age : {{ cat?.age }}</p>
+  <p>Lieu : {{ cat?.postalcode }}</p>
+  <p>{{ cat?.description }}</p>
+  <button>Adopter</button>
+</div>

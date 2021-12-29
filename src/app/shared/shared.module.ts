@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchCardComponent } from './search-card/search-card.component';
+import { CatCardComponent } from './cat-card/cat-card.component';
 
 @NgModule({
-  declarations: [SearchCardComponent],
+  declarations: [CatCardComponent],
   imports: [CommonModule],
+  exports: [CatCardComponent],
 })
 export class SharedModule {}

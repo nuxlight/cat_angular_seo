@@ -1,0 +1,22 @@
+.container-charged-logo {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px 15px 0px;
+  .charged-logo {
+    width: 10%;
+    opacity: 1;
+    animation: fade 5s linear;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
